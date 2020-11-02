@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <app-novi-nalog (nalogDodat)="onNalogDodat($event)"></app-novi-nalog>      
+      <app-nalog
+        *ngFor="let nalog of nalozi; let i = index"
+        [dodatNalog]="nalog"
+        [id]="i"
+        (statusPromjenjen)="onStatusPromjenjen($event)"></app-nalog>
+
+        <!--Otkomenatarisati za primjer sa servisima-->
+        <!--<app-novi-nalog></app-novi-nalog>
+        <app-nalog
+        *ngFor="let nalog of nalozi; let i = index"
+        [dodatNalog]="nalog"
+        [id]="i"></app-nalog> !--> 
+    </div>
+  </div>
+</div>
+
